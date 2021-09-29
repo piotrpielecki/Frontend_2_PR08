@@ -1,0 +1,34 @@
+<div class="card p2" style="width: 100%;">
+    <div class="card-body">
+        <h5 class="card-title">List of all movies</h5>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Episode No.</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Short desc</th>
+                    <th scope="col">Release Date</th>
+                    <th scope="col">Characters No.</th>
+                    <th scope="col">Planets No.</th>
+                    <th scope="col">Starships No.</th>
+                    <th scope="col">Vehicles No.</th>
+                    <th scope="col">Species No.</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let filmItem of filmList; let i=index;">
+                    <td>{{i+1}}</td>
+                    <td>{{filmItem.title}}</td>
+                    <td>{{filmItem.opening_crawl.slice(0,50)}}...</td>
+                    <td>{{filmItem.release_date}}</td>
+                    <td>{{filmItem.characters.length}}</td>
+                    <td>{{filmItem.planets.length}}</td>
+                    <td>{{filmItem.starships.length}}</td>
+                    <td>{{filmItem.vehicles.length}}</td>
+                    <td>{{filmItem.species.length}}</td>
+                    <td><a href="film/{{ i+1 }}" class="btn btn-primary">See details...</a></td>
+                </tr>
+        </table>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="card p2" style="width: 100%;">
+    <div class="card-body">
+        <h5 class="card-title">List of all people</h5>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Birth Year</th>
+                    <th scope="col">Gender</th>
+                    <th scope="col">Homeworld</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let person of peopleList; let i=index;">
+                    <td>{{person.name}}</td>
+                    <td>{{person.birth_year}}</td>
+                    <td>{{person.gender}}</td>
+                    <td>{{person.homeworld}}</td>
+                    <td><a href="people/{{ i+1 }}" class="btn btn-primary">See details...</a></td>
+                </tr>
+        </table>
+    </div>
+</div>

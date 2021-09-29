@@ -1,0 +1,24 @@
+<div class="card p2" style="width: 100%;">
+    <div class="card-body">
+        <h5 class="card-title">List of all planets</h5>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Population</th>
+                    <th scope="col">Residents</th>
+                    <th scope="col">Gravity</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let planet of planetList; let i=index;">
+                    <td>{{planet.name}}</td>
+                    <td>{{planet.population}}</td>
+                    <td>{{planet.residents.length}}</td>
+                    <td>{{planet.gravity}}</td>
+                    <td><a href="planets/{{ i+1 }}" class="btn btn-primary">See details...</a></td>
+                </tr>
+        </table>
+    </div>
+</div>

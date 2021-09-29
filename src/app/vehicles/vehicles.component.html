@@ -1,0 +1,26 @@
+<div class="card p2" style="width: 100%;">
+    <div class="card-body">
+        <h5 class="card-title">List of all starships</h5>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Model</th>
+                    <th scope="col">Manufacturer</th>
+                    <th scope="col">Cost in credits</th>
+                    <th scope="col">Vehicle class</th>
+                    <th scope="col">Crew</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let vehicle of vehiclesList; let i=index;">
+                    <td>{{vehicle.model}}</td>
+                    <td>{{vehicle.manufacturer}}</td>
+                    <td>{{vehicle.cost_in_credits}}</td>
+                    <td>{{vehicle.vehicle_class}}</td>
+                    <td>{{vehicle.crew}}</td>
+                    <td><a href="vehicles/{{ vehicle.url.slice(31) }}" class="btn btn-primary">See details...</a></td>
+                </tr>
+        </table>
+    </div>
+</div>

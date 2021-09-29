@@ -1,0 +1,26 @@
+<div class="card p2" style="width: 100%;">
+    <div class="card-body">
+        <h5 class="card-title">List of all species</h5>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Classification</th>
+                    <th scope="col">Designation</th>
+                    <th scope="col">Average lifespan</th>
+                    <th scope="col">Language</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let species of speciesList; let i=index;">
+                    <td>{{species.name}}</td>
+                    <td>{{species.classification}}</td>
+                    <td>{{species.designation}}</td>
+                    <td>{{species.average_lifespan}}</td>
+                    <td>{{species.language}}</td>
+                    <td><a href="species/{{ i+1 }}" class="btn btn-primary">See details...</a></td>
+                </tr>
+        </table>
+    </div>
+</div>

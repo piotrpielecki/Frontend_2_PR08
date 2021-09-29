@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pielecki-piotr-pr08';
+
+  activeMenuItem: String = "";
+
+  onActivateMenuItem(itemName: String) {
+    this.activeMenuItem = itemName;
+  }
 }
